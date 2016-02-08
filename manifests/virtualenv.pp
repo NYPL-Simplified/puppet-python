@@ -144,12 +144,12 @@ define python::virtualenv (
     # To check for this we test for wheel parameter using help and then using
     # version, this makes sure we only use wheels if they are supported
 
-    file { $venv_dir:
-      ensure => directory,
-      owner  => $owner,
-      group  => $group,
-      mode   => $mode
-    }
+#    file { $venv_dir:
+#      ensure => directory,
+#      owner  => $owner,
+#      group  => $group,
+#      mode   => $mode
+#    }
 
     $virtualenv_cmd = "${python::exec_prefix}${used_virtualenv}"
     $pip_cmd = "${python::exec_prefix}${venv_dir}/bin/pip"
